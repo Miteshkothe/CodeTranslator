@@ -17,7 +17,7 @@ public class Translate {
             String language= req.getLanguage();
             String transcode=req.getTranscode();
             String prompt=String.format("""
-                    convert the given code %s of %s into %s nothing else no comment no info just code
+                    convert the given code %s of %s into %s nothing else no comment no info just code with proper syntax like if i paste it in compiler it will work
                     """,code,language,transcode);
             GenerateContentResponse response =
                     client.models.generateContent(
